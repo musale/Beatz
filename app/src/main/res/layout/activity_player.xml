@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Player">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp" />
+
+    <Button
+        android:id="@+id/btPlay"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:text="@string/Play" />
+
+    <Button
+        android:id="@+id/btPrev"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/btPlay"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:text="@string/Prev" />
+
+    <Button
+        android:id="@+id/btNxt"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btPlay"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:text="@string/Next" />
+
+    <Button
+        android:id="@+id/btFB"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btPlay"
+        android:layout_toEndOf="@+id/btPrev"
+        android:layout_toRightOf="@+id/btPrev"
+        android:text="@string/FastBackword" />
+
+    <Button
+        android:id="@+id/btFF"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btPlay"
+        android:layout_toStartOf="@+id/btNxt"
+        android:layout_toLeftOf="@+id/btNxt"
+        android:text="@string/FastForward" />
+
+
+</RelativeLayout>

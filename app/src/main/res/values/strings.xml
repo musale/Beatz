@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Beatz_final</string>
+    <string name="kenyan_music_app">Kenyan Music App</string>
+    <string name="developer_name">T!</string>
+    <string name="img_splash_screen">img_splash_screen</string>
+    <string name="music_icon">Music</string>
+    <string name="local_radio_icon">Local Radio</string>
+    <string name="new_local_jams_icon">New Local Jams</string>
+    <string name="toggle_bar_image">TODO</string>
+    <string name="title_activity_player">Player</string>
+    <string name="Play">||</string>
+    <string name="Prev"><![CDATA[|<]]></string>
+    <string name="Next"><![CDATA[|>]]></string>
+    <string name="FastBackword"><![CDATA[<<]]></string>
+    <string name="FastForward"><![CDATA[>>]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
