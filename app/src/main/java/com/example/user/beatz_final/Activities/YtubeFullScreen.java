@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 
 import com.example.user.beatz_final.R;
 import com.example.user.beatz_final.youtubetry.DeveloperKey;
+import com.example.user.beatz_final.youtubetry.YoutubePlaylist;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -72,21 +73,10 @@ public class YtubeFullScreen extends YoutubeFailureRecoveryActivity
 
     @Override
     public void onBackPressed() {
-        Intent myintent = new Intent(YtubeFullScreen.this, YouTubePlayer.class);
+        Intent myintent = new Intent(YtubeFullScreen.this, YoutubePlaylist.class);
         myintent.putExtra("abc", abc);
         startActivity(myintent);
     }
-
-//    @Override
-//    public void onInitializationSucess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored){
-//        this.player = player;
-//
-//        player.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_CUSTOM_LAYOUT);
-//        player.setOnFullscreenListener(this);
-//        if(!wasRestored){
-//            player.cueVideo(videoid);
-//        }
-//    }
 
 
     @Override
@@ -150,4 +140,14 @@ public class YtubeFullScreen extends YoutubeFailureRecoveryActivity
     }
 
 
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
+        this.player = player;
+
+        player.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_CUSTOM_LAYOUT);
+        player.setOnFullscreenListener(this);
+        if(!wasRestored){
+            player.cueVideo(videoid);
+        }
+    }
 }

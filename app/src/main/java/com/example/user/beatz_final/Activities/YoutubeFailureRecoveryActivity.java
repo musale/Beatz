@@ -16,11 +16,6 @@ public abstract class YoutubeFailureRecoveryActivity extends YouTubeBaseActivity
     private static final int RECOVERY_DIALOG_REQUEST = 1;
 
     @Override
-    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-
-    }
-
-    @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult errorReason) {
         if(errorReason.isUserRecoverableError()){
             errorReason.getErrorDialog(this, RECOVERY_DIALOG_REQUEST).show();

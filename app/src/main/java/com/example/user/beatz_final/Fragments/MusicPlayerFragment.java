@@ -93,7 +93,7 @@ public class MusicPlayerFragment extends Fragment{
             }
         });
 
-      return  rootView;
+      return rootView;
     }
 
 

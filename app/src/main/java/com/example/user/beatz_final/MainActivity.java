@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.user.beatz_final.Fragments.MusicPlayerFragment;
 import com.example.user.beatz_final.Fragments.RadioFragment;
+import com.example.user.beatz_final.Fragments.YouTube_Main_Fragment;
 import com.example.user.beatz_final.youtubetry.YoutubePlaylist;
 
 
@@ -65,8 +66,7 @@ public class MainActivity extends AppCompatActivity
 
         }
         if(id == R.id.recommended){
-            Intent myintent = new Intent(this, YoutubePlaylist.class);
-            startActivity(myintent);
+            commitFragment(YouTube_Main_Fragment.newInsatnce());
 
         }
 

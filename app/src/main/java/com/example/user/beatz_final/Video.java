@@ -31,4 +31,18 @@ public class Video {
     public void setVideoThumbnail(String videoThumbnail) {
         this.videoThumbnail = videoThumbnail;
     }
+
+    public Video(String videoTitle, String videoThumbnail, String videoId) {
+        super();
+        this.videoTitle=videoTitle;
+        this.videoThumbnail=videoThumbnail;
+        this.videoId=videoId;
+    }
+    public Video(){
+        super();
+    }
+    @Override
+    public String toString(){
+        return "Video [videoTitle=" + videoTitle + ",videoThumbnail=" + videoThumbnail + ",videoId=" +videoId + "]";
+    }
 }
