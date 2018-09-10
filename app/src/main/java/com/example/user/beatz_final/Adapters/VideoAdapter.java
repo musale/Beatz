@@ -36,7 +36,7 @@ public class VideoAdapter extends ArrayAdapter<Video> implements SectionIndexer 
     String[]sections;
     private ImageLoader imgLoader;
 
-    public VideoAdapter(Context context, ArrayList<Video> itemsArrayList, ContentResolver resolver, Resources resource){
+    public VideoAdapter(Context context, ArrayList<Video> itemsArrayList){
         super(context, R.layout.textvideo, itemsArrayList);
         this.context = context;
         this.itemsArrayList = itemsArrayList;
@@ -75,27 +75,18 @@ public class VideoAdapter extends ArrayAdapter<Video> implements SectionIndexer 
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
-        RelativeLayout alertView;
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View rowView = inflater.inflate(R.layout.song_layout, parent, false);
+        TextView youtube_title = (TextView) rowView.findViewById(R.id.video_title);
+        TextView youtube_video_thumbnail = (TextView) rowView.findViewById(R.id.video_thumbnail);
+        TextView youtube_video_url = (TextView) rowView.findViewById(R.id.video_url);
 
-        //Get the current alert object
-        //alerts al = getItem(position)
+        youtube_title.setText(itemsArrayList.get(position).getVideoTitle());
+        youtube_video_thumbnail.setText(itemsArrayList.get(position).getVideoThumbnail());
+        youtube_video_url.setText(itemsArrayList.get(position).getVideoTitle());
 
-        // inflate the View
-        if(convertView==null){
-            alertView = new RelativeLayout(getContext());
-            String inflater = Context.LAYOUT_INFLATER_SERVICE;
-            LayoutInflater vi;
-            vi = (LayoutInflater)getContext().getSystemService(inflater);
-            vi.inflate(R.layout.textvideo, alertView, true);
-        }else{
-            alertView = (RelativeLayout) convertView;
-        }
-        ImageView image = (ImageView)alertView.findViewById(R.id.tumbhid);
-        TextView labelView = (TextView)alertView.findViewById(R.id.label);
-        Picasso.with(context).load(itemsArrayList.get(position).getVideoThumbnail()).placeholder(R.drawable.song_icon).error(R.drawable.song_icon).into(image);
-        labelView.setText(itemsArrayList.get(position).getVideoTitle());
-
-        return alertView;
+        return rowView;
     }
 
     @Override

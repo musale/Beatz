@@ -18,4 +18,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="you_main_image">TODO</string>
     <string name="try_local_music_youtube_main">Try Local Music</string>
+    <string name="Thumbnail">video_thumbnail</string>
 </resources>
