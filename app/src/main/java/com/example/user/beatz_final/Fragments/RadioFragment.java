@@ -57,7 +57,7 @@ public class RadioFragment extends Fragment {
                     btn.setText("Pause Streaming");
 
                     if (initialStage){
-                        new Player().execute("https://www.youtube.com/watch?v=GBzUmW0SnAU");
+                        new Player().execute("http://www.radio.or.ke/#capital-fm-98-4");
                     } else {
                         if (!mediaPlayer.isPlaying())
                             mediaPlayer.start();
@@ -99,7 +99,7 @@ public class RadioFragment extends Fragment {
                     public void onCompletion(MediaPlayer mp) {
                         initialStage = true;
                         playPause = false;
-                        btn.setText("Launch Streaming");
+                        btn.setText("Pause Streaming");
                         mediaPlayer.stop();
                         mediaPlayer.reset();
 

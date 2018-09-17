@@ -80,11 +80,9 @@ public class VideoAdapter extends ArrayAdapter<Video> implements SectionIndexer 
         View rowView = inflater.inflate(R.layout.song_layout, parent, false);
         TextView youtube_title = (TextView) rowView.findViewById(R.id.video_title);
         TextView youtube_video_thumbnail = (TextView) rowView.findViewById(R.id.video_thumbnail);
-        TextView youtube_video_url = (TextView) rowView.findViewById(R.id.video_url);
 
         youtube_title.setText(itemsArrayList.get(position).getVideoTitle());
         youtube_video_thumbnail.setText(itemsArrayList.get(position).getVideoThumbnail());
-        youtube_video_url.setText(itemsArrayList.get(position).getVideoTitle());
 
         return rowView;
     }
