@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.user.beatz_final.R;
 import com.example.user.beatz_final.youtubetry.YoutubePlaylist;
@@ -18,14 +17,13 @@ import com.example.user.beatz_final.youtubetry.YoutubePlaylist;
  */
 public class YouTube_Main_Fragment extends Fragment {
 
-    static YouTube_Main_Fragment  thisFragment;
+    static YouTube_Main_Fragment thisFragment;
 
-    public static YouTube_Main_Fragment  newInsatnce() {
-        thisFragment =new YouTube_Main_Fragment ();
+    public static YouTube_Main_Fragment newInstance() {
+        thisFragment = new YouTube_Main_Fragment();
 
         return thisFragment;
     }
-
 
 
     public YouTube_Main_Fragment() {
@@ -37,7 +35,7 @@ public class YouTube_Main_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view  = inflater.inflate(R.layout.fragment_you_tube__main_, container, false);
+        View view = inflater.inflate(R.layout.fragment_you_tube__main_, container, false);
         Button tryLocalMusic = view.findViewById(R.id.tryLocalMusicId);
         tryLocalMusic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,12 +46,4 @@ public class YouTube_Main_Fragment extends Fragment {
         });
         return view;
     }
-
-    public void click1(View view){
-        Intent i = new Intent(getActivity(), YoutubePlaylist.class);
-        i.putExtra("abc", "local");
-        startActivity(i);
-
-    }
-
 }

@@ -80,7 +80,7 @@ public class MusicPlayerFragment extends Fragment{
             items[i] = mySongs.get(i).getName().toString().replace(".mp3", "").replace(".wav", "").replace(".mp4","");
         }*/
 
-        ArrayAdapter<String> adp = new ArrayAdapter<>(getActivity().getApplicationContext(),R.layout.song_layout,R.id.textView, songs);
+        ArrayAdapter<String> adp = new ArrayAdapter<>(getActivity().getApplicationContext(),R.layout.song_layout,R.id.video_url, songs);
         lv.setAdapter(adp);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

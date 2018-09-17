@@ -7,7 +7,6 @@
     <string name="local_radio_icon">Local Radio</string>
     <string name="new_local_jams_icon">New Local Jams</string>
     <string name="toggle_bar_image">TODO</string>
-    <string name="title_activity_player">Player</string>
     <string name="Play">||</string>
     <string name="Prev"><![CDATA[|<]]></string>
     <string name="Next"><![CDATA[|>]]></string>
@@ -15,8 +14,6 @@
     <string name="FastForward"><![CDATA[>>]]></string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="you_main_image">TODO</string>
     <string name="try_local_music_youtube_main">Try Local Music</string>
-    <string name="Thumbnail">video_thumbnail</string>
 </resources>

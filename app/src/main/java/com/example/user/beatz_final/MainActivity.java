@@ -1,6 +1,6 @@
 package com.example.user.beatz_final;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +17,6 @@ import android.widget.Toast;
 import com.example.user.beatz_final.Fragments.MusicPlayerFragment;
 import com.example.user.beatz_final.Fragments.RadioFragment;
 import com.example.user.beatz_final.Fragments.YouTube_Main_Fragment;
-import com.example.user.beatz_final.youtubetry.YoutubePlaylist;
 
 
 public class MainActivity extends AppCompatActivity
@@ -27,6 +25,7 @@ public class MainActivity extends AppCompatActivity
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Handler mHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity
 
         drawerLayout = findViewById(R.id.drawer_layout);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_menu_black_24dp);
         toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,24 +48,20 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         onNavigationItemSelected(navigationView.getMenu().findItem(R.id.home));
-
-
-
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.home){
+        if (id == R.id.home) {
             commitFragment(MusicPlayerFragment.newInstance());
         }
-        if(id == R.id.radio){
+        if (id == R.id.radio) {
             commitFragment(RadioFragment.newInsatnce());
-
         }
-        if(id == R.id.recommended){
-            commitFragment(YouTube_Main_Fragment.newInsatnce());
+        if (id == R.id.recommended) {
+            commitFragment(YouTube_Main_Fragment.newInstance());
 
         }
 

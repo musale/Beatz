@@ -1,9 +1,6 @@
-package com.example.user.beatz_final;
+package com.example.user.beatz_final.models;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-public class Video {
+public class VideoModel {
     String videoId;
     String videoTitle;
     String videoThumbnail;
@@ -32,17 +29,13 @@ public class Video {
         this.videoThumbnail = videoThumbnail;
     }
 
-    public Video(String videoTitle, String videoThumbnail, String videoId) {
-        super();
+    public VideoModel(String videoTitle, String videoThumbnail, String videoId) {
         this.videoTitle=videoTitle;
         this.videoThumbnail=videoThumbnail;
         this.videoId=videoId;
     }
-    public Video(){
-        super();
-    }
     @Override
     public String toString(){
-        return "Video [videoTitle=" + videoTitle + ",videoThumbnail=" + videoThumbnail + ",videoId=" +videoId + "]";
+        return String.format("VideoModel [videoTitle=%s,videoThumbnail=%s,videoId=%s]", videoTitle, videoThumbnail, videoId);
     }
 }
